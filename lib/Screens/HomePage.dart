@@ -28,10 +28,10 @@ class _HomePageState extends State<HomePage> {
     final noteBloc = BlocProvider.of<NotesBloc>(context);
 
     return Scaffold(
-      backgroundColor: Color(0xffF2F3F7),
+      backgroundColor: Color(0xffF8BBD0),
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        backgroundColor: Color(0xffF2F3F7),
+        backgroundColor: Color(0xFFEC407A),
         elevation: 0,
         title: TextFrave(
             text: 'Keluhkesalku', fontWeight: FontWeight.w500, fontSize: 21),
@@ -56,7 +56,7 @@ class _HomePageState extends State<HomePage> {
           builder: (_, Box box, __) {
             if (box.values.isEmpty) {
               return Center(
-                child: TextFrave(text: 'Keep smile', color: Colors.black),
+                child: TextFrave(text: '', color: Colors.purple),
               );
             }
 
@@ -102,11 +102,13 @@ class _HomePageState extends State<HomePage> {
           height: 50,
           width: 50,
           decoration: BoxDecoration(
-              color: Color(0xff1977F3),
+              color: Color(0xff880E4F),
               shape: BoxShape.circle,
               boxShadow: [
                 BoxShadow(
-                    color: Colors.blue, blurRadius: 10, spreadRadius: -5.0)
+                    color: Colors.deepPurple,
+                    blurRadius: 10,
+                    spreadRadius: -5.0)
               ]),
           child: Icon(Icons.add, color: Colors.white),
         ),
