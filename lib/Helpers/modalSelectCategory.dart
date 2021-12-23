@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:keep_notes/Bloc/Notes/notes_bloc.dart';
-import 'package:keep_notes/Widgets/ItemCategory.dart';
-import 'package:keep_notes/Widgets/TextFrave.dart';
+import 'package:keluhkesalku/Bloc/Notes/notes_bloc.dart';
+import 'package:keluhkesalku/Widgets/ItemCategory.dart';
+import 'package:keluhkesalku/Widgets/TextFrave.dart';
 
 void showDialogBottomFrave(ctx) {
   final noteBloc = BlocProvider.of<NotesBloc>(ctx);

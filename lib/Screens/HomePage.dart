@@ -2,11 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:intl/intl.dart';
-import 'package:keep_notes/Bloc/Notes/notes_bloc.dart';
-import 'package:keep_notes/Models/NoteModels.dart';
-import 'package:keep_notes/Screens/AddNotePage.dart';
-import 'package:keep_notes/Screens/ShowNotePage.dart';
-import 'package:keep_notes/Widgets/TextFrave.dart';
+import 'package:keluhkesalku/Bloc/Notes/notes_bloc.dart';
+import 'package:keluhkesalku/Models/NoteModels.dart';
+import 'package:keluhkesalku/Screens/AddNotePage.dart';
+import 'package:keluhkesalku/Screens/ShowNotePage.dart';
+import 'package:keluhkesalku/Widgets/TextFrave.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -28,7 +29,7 @@ class _HomePageState extends State<HomePage> {
     final noteBloc = BlocProvider.of<NotesBloc>(context);
 
     return Scaffold(
-      backgroundColor: Color(0xffF8BBD0),
+      backgroundColor: Color(0xffF2F3F7),
       appBar: AppBar(
         automaticallyImplyLeading: false,
         backgroundColor: Color(0xFFEC407A),
@@ -56,7 +57,9 @@ class _HomePageState extends State<HomePage> {
           builder: (_, Box box, __) {
             if (box.values.isEmpty) {
               return Center(
-                child: TextFrave(text: '', color: Colors.purple),
+                child: SvgPicture.asset(
+                  'assets/home.svg',
+                ),
               );
             }
 
@@ -173,7 +176,7 @@ class _ListNotes extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   TextFrave(
-                      text: note.title.toString(), fontWeight: FontWeight.w600),
+                      text: note.title.toString(), fontWeight: FontWeight.w400),
                   TextFrave(
                       text: note.category!,
                       fontSize: 16,
